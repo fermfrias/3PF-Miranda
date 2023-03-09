@@ -1,0 +1,23 @@
+<div class="container">
+    <form [formGroup]="formulario" (ngSubmit)="agregarCurso()">
+        <div class="row">
+            <mat-form-field class="col-md-7">
+                <mat-label>Nivel</mat-label>
+                <input matInput formControlName="nivel">
+            </mat-form-field>
+            <mat-form-field class="col-md-7">
+                <mat-label>Comisión</mat-label>
+                <input matInput formControlName="comision">
+            </mat-form-field>
+            <mat-form-field class="col-md-7">
+                <mat-label>Profesor</mat-label>
+                <mat-select formControlName="Profesor"> 
+                    <mat-option *ngFor="let Profesor of profesores$ | async"[value]="Profesor"> {{ Profesor.nombre }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div class="col-md-7">
+                <button mat mat-raised-button type="submit" color="primary"> guardar  cambios </button>
+            </div>
+        </div>
+    </form>
+</div>

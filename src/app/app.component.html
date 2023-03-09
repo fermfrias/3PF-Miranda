@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  
+  </button>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  <button mat-button (click)="redirigirInicio()"> Inicio </button>
+  <button mat-button routerLink="cursos/listar"> Listar Cursos </button>
+  <button mat-button routerLink="cursos/agregar"> Agregar Curso </button>
+</mat-toolbar>
+<hr>
+<h2>Plataforma</h2>
+<router-outlet></router-outlet>
+<hr>
+<app-formulario-reactivo></app-formulario-reactivo>
+<hr>

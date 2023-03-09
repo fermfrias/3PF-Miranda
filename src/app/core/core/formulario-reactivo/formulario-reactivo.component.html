@@ -1,0 +1,37 @@
+<form [formGroup]="formularioLogin" (ngSubmit)="login()">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input formControlName="correo" type="email" class="form-control" id="exampleInputEmail1"
+            aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <div class="valido" 
+            *ngIf="formularioLogin.controls['correo'].touched && formularioLogin.controls['correo'].valid">
+            Bien!
+          </div>
+          <div class="invalido" *ngIf="formularioLogin.controls['correo'].touched && formularioLogin.controls['correo'].errors?.['email']">
+           Escribe una dirección de correo valida porfa
+          </div>
+          <div class="invalido" *ngIf="formularioLogin.controls['correo'].touched && formularioLogin.controls['correo'].errors?.['required']">
+            Campo obligatorio
+          </div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input formControlName="contrasena" type="password" class="form-control" id="exampleInputPassword1">
+        <div class="valido" *ngIf="formularioLogin.controls['contrasena'].valid">
+            Gracias :)
+          </div>
+          <div class="invalido" *ngIf="formularioLogin.controls['contrasena'].touched && formularioLogin.controls['contrasena'].errors?.['required']">
+            Campo obligatorio
+           </div>
+          <div class="invalido" *ngIf="formularioLogin.controls['contrasena'].touched && formularioLogin.controls['contrasena'].errors?.['minlength']">
+            Tu contraseña debe tener al menos 7 caracteres ;)
+           </div>
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label formControlName="recordarCredenciales" class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="formularioLogin.invalid" >Submit</button>
+    <button type="reset" class="btn btn-secondary">Reset</button>
+</form>

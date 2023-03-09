@@ -1,0 +1,27 @@
+<table mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="nivel">
+        <th mat-header-cell *matHeaderCellDef appEstilo>Nivel</th>
+        <td mat-cell *matCellDef="let element">{{ element.nivel }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="comision">
+        <th mat-header-cell *matHeaderCellDef="" appEstilo>Comision</th>
+        <td mat-cell *matCellDef="let element">{{ element.comision }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="profesor">
+        <th mat-header-cell *matHeaderCellDef="" appEstilo>Profesor</th>
+        <td mat-cell *matCellDef="let element">{{ element.profesor.nombre }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="inscribir">
+        <th mat-header-cell *matHeaderCellDef="" appEstilo>inscripciones</th>
+        <td mat-cell *matCellDef="let element">{{ element.inscribir }}
+            <button mat-raised-button color="primary">Quiero Inscribirme</button>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+    <tr mat-header-row *matRowDef="let row; columns: columnas "></tr>
+</table>

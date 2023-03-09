@@ -1,0 +1,189 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navegacion {
+    width: 100%;
+    background-color: #7721cc;
+    justify-content: center;
+    position: fixed;
+    height: 100px;
+    height: 100px;
+    padding-top: 17px;
+    padding-left: 10%;
+    padding-right: 10%;
+    z-index: 6666;
+}
+
+.navegacion ul {
+    padding-left: 5%;
+}
+
+.navegacion .container-fluid {
+    width: 100%;
+}
+
+.navegacion .nav-item {
+    padding: 2%;
+}
+
+.nav-item a {
+    color: #ffffff;
+    font-family: 'Asap', sans-serif;
+    letter-spacing: 2px;
+    width: max-content;
+}
+
+
+#navbar {
+    justify-content: space-around;
+}
+
+.navbar-brand img {
+    width: 100px;
+}
+
+nav li a:hover {
+    padding: 7% 7%;
+    background: #1500fd;
+    transition: .5s;
+}
+
+main {
+    background-color: #f7f7f7;
+    padding-top: 110px;
+}
+
+.banner-principal {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #7721cc;
+}
+
+.welcome {
+    Width: 50%;
+    display: flex;
+}
+
+.welcome h1{
+    color: #f7f7f7;
+    padding: 10%;
+}
+
+
+.cuadricula {
+    Width: 50%;
+    display: flex;
+}
+
+
+.cuadricula img {
+    width: 100%;
+    display: flex;
+    padding: 10%;
+}
+
+.contenido {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 5%;
+    place-items: center;
+}
+
+.yo {
+    align-items: center;
+    Width: 50%;
+    display: flex;
+    padding-left: 5%;
+}
+
+.yo img {
+    width: 60%;
+    display: flex;
+}
+
+.mi-presentacion {
+    Width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    vertical-align: middle;
+}
+
+.form {
+    Width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    vertical-align: middle;
+}
+
+h1 {
+    font-family: 'Asap', sans-serif;
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: #7721cc;
+}
+
+.mi-presentacion p {
+    font-family: 'Asap', sans-serif;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: rgb(26, 26, 26);
+    padding-right: 15%;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    background-color: #7721cc;
+    width: 100%;
+    letter-spacing: 3px;
+}
+
+.gatoimg {
+    Width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+footer div img {
+    width: 40%;
+}
+
+.navegacionfooter {
+    flex-direction: row;
+    padding-top: 5%;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+.navegacionfooter li {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    width: 60%;
+    justify-content: left;
+}
+
+footer a {
+    display: flex;
+    flex-direction: row;
+    color: #ffeddf;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-family: 'Asap', sans-serif;
+    font-size: small;
+    width: max-content;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
