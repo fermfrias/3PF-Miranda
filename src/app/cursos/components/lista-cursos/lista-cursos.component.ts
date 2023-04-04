@@ -16,6 +16,7 @@ import { CursosService } from '../../services/cursos.service';
 export class ListaCursosComponent implements OnInit {
   cursos!: curso[];
   cursos$!: Observable<curso[]>;
+  sesion$!: Observable<Sesion>
 
   constructor(
     private cursoService: CursosService,
@@ -25,6 +26,10 @@ export class ListaCursosComponent implements OnInit {
 
   ngOnInit() {
     this.cursos$ = this.cursoService.obtenerCurso();
+    this.sesion$ = this.sesion.ObtenerSesion();
+    this.sesion.ObtenerSesion().subscribe((sesion: Sesion) => {
+      console.log('Estado de sesion', sesion)
+    })
   
   }
 

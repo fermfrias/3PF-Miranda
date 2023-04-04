@@ -8,7 +8,8 @@ const routes: Routes = [
   {path: 'inicio', component: InicioComponent, canActivate: [SesionGuard]},
   {
     path:'cursos',
-    loadChildren: () => import('./cursos/cursos.module').then((modulo)=> modulo.CursosModule)
+    loadChildren: () => import('./cursos/cursos.module').then((modulo)=> modulo.CursosModule),
+    canLoad: [SesionGuard]
   },
   {
     path:'auth',

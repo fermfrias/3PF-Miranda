@@ -5,12 +5,13 @@ import { EditarCursoComponent } from './components/editar-curso/editar-curso.com
 import { ListaCursosComponent } from './components/lista-cursos/lista-cursos.component';
 import { RouterModule } from '@angular/router';
 import { SesionGuard } from '../core/guards/sesion.guard';
+import { AdminGuard } from '../core/guards/admin.guard';
 
 const routes: Routes = [
   {path: '', canActivateChild:[SesionGuard], children: [
     {path: 'listar', component: ListaCursosComponent},
-    {path: 'editar', component: EditarCursoComponent},
-    {path: 'agregar', component: AgregarCurComponent}
+    {path: 'editar', component: EditarCursoComponent, canActivate: [AdminGuard] },
+    {path: 'agregar', component: AgregarCurComponent, canActivate: [AdminGuard]}
   ]}
 ]
 

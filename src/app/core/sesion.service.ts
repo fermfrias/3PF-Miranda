@@ -11,6 +11,7 @@ export class SesionService {
     let sesion: Sesion = {
       sesionActiva: false
     };
+    
     this.sesion$ = new BehaviorSubject<Sesion>(sesion);
   }
 
@@ -20,5 +21,9 @@ export class SesionService {
 
   ObtenerSesion(): Observable<Sesion>{
     return this.sesion$.asObservable();
+  }
+
+  logout(sesion: Sesion){
+    this.sesion$.next(sesion);
   }
 }

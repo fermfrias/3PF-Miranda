@@ -11,25 +11,32 @@ import { ListaCursosComponent } from './cursos/components/lista-cursos/lista-cur
 import { InicioComponent } from './core/core/inicio/inicio.component';
 import { MaterialModule } from './material.module';
 import { CoreModule } from './core/core.module';
+import { AppRountingModule } from './app-rounting.module';
+import { AutenticacionModule } from './autenticacion/autenticacion.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormularioReactivoComponent,
     NotFoundComponent,
     InicioComponent,
+    FormularioReactivoComponent,
   ],
 
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    CursosModule,
     MaterialModule,
-    CoreModule
+    CoreModule,
+    AppRountingModule,
+    AutenticacionModule
     ],
 
+    exports:[
+      ReactiveFormsModule,
+      MaterialModule
+    ],
     
 
   providers: [],

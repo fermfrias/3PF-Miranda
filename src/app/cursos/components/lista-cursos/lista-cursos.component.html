@@ -17,10 +17,12 @@
                 <p>{{ curso.comision }}</p>
             </mat-card-content>
                 <mat-card-actions>
-                    <button mat-raised-button color="primary" (click)="redirigirEditarCurso(curso)">
+                    <ng-container *ngIf="sesion$ | async as sesion"> 
+                    <button *ngIf="sesion.usuarioActivo?.admin" mat-raised-button color="primary" (click)="redirigirEditarCurso(curso)">
                         Editar
                     </button>
-                    <button mat-button color="warn" (click)="eliminarCurso(curso)"> Eliminar</button>
+                    <button *ngIf="sesion.usuarioActivo?.admin" mat-button color="warn" (click)="eliminarCurso(curso)"> Eliminar</button>
+                </ng-container>
                 </mat-card-actions>
             </mat-card>
         </div>

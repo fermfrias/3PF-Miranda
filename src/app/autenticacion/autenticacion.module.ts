@@ -6,6 +6,7 @@ import { AutenticacionInicioComponent } from './components/autenticacion-inicio/
 import { LoginComponent } from './components/login/login.component';
 import { materialize } from 'rxjs';
 import { MaterialModule } from '../material.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MaterialModule } from '../material.module';
   imports: [
     CommonModule,
     AutenticacionRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class AutenticacionModule { }
